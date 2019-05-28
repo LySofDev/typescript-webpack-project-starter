@@ -1,0 +1,13 @@
+version: '3.2'
+
+services:
+
+  node:
+    build: .
+    command: npx webpack-dev-server
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/mnt
+      - /mnt/node_modules
+    working_dir: /mnt
